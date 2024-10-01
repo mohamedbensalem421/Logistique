@@ -208,7 +208,7 @@ prevBtn.addEventListener('click', () =>{
     let data = {...Object.fromEntries(formData)}
     let fetchData = async() =>{
       try {
-        let response = await axios.post('http://localhost:3000/api/v1/frets', data)
+        let response = await axios.post('https://logistique-back-end.onrender.com/api/v1/frets', data)
         toast(response.data.msg,successColor)
       } catch (error) {
         toast(error.response.data.msg,errorColor)
