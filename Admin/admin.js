@@ -53,7 +53,7 @@ table.addEventListener('click', async (e) =>{
   if(e.target.classList.contains('delete')){
     let id = e.target.parentElement.parentElement.id
     try {
-      await axios.delete(`http://localhost:3000/api/v1/frets/${id}`)
+      await axios.delete(`https://logistique-back-end.onrender.com/api/v1/frets/${id}`)
       toast('Fret supprimé')
     } catch (error) {
       console.log(error);
