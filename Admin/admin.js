@@ -17,7 +17,7 @@ for (i = 0; i < rows.length; i++) {
 }
 let fetchData = async () =>{
   try {
-    let {data} = await axios('https://logistique-back-end.onrender.com//api/v1/frets')
+    let {data} = await axios('https://logistique-back-end.onrender.com/api/v1/frets')
     table.innerHTML = 
     `<thead> <tr><td> Nom </td> <td>Téléphone</td> <td> Ville de livraison </td> <td> Ville de départ </td> <td> Type expédition </td> </tr> </thead>
     ${data.map(({_id, nom, telephone, livraison, depart, fret}) =>{
